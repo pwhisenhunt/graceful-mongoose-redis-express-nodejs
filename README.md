@@ -1,6 +1,6 @@
 # Graceful Mongoose, Redis, and Express in Node.js
 
-This repo contains example code for how to gracefully handle Mongoose, Redis, and Express in Node.js. You will likely want to pull this code into separate files or refactor it so as to not bloat out your main app file.
+This repo contains example code for my article on [Graceful Mongoose, Redis, && Express in Node.js](https://medium.com/@phillip.whisenhunt/graceful-mongoose-redis-express-in-node-js-eeee78398b17). You will likely want to pull this code into separate files or refactor it so as to not bloat out your main app file.
 
 
 # Running The Example
