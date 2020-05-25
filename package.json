@@ -1,0 +1,19 @@
+{
+  "name": "process-handling",
+  "version": "1.0.0",
+  "description": "example of how to handle express, redis, and mongo through the entire apps process life cycle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pwhisenhunt",
+  "license": "ISC",
+  "engines" : { 
+    "node" : "13.12.0" 
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "redis": "^3.0.2"
+  }
+}
