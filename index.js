@@ -154,8 +154,8 @@ process.on('SIGINT', () => {
 });
 
 app.on('ready', () => {
-  console.log(`Starting http server on port ${env.PORT}...`);
-  server.listen(env.PORT, () => {
-    console.log(`Started http server on port ${env.PORT}. :)`);
+  console.log(`Starting http server on port ${env.HTTP_PORT}...`);
+  server.listen(env.HTTP_PORT, () => {
+    console.log(`Started http server on port ${env.HTTP_PORT}. :)`);
   });
 });
