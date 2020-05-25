@@ -8,8 +8,8 @@
   },
   "author": "pwhisenhunt",
   "license": "ISC",
-  "engines" : { 
-    "node" : "13.12.0" 
+  "engines": {
+    "node": "13.12.0"
   },
   "dependencies": {
     "express": "^4.17.1",
