@@ -21,7 +21,7 @@ const mongooseEvents = [
   'reconnectFailed',
 ].forEach(mongooseEvent => {
   mongoose.connection.on(mongooseEvent, (err) => {
-    // TODO: send errors to your error tracker if needed
+    // Note: this is where you would send errors to your error tracker
     console.log(`mongoose client event: ${mongooseEvent}. ${err ? `${err}`: ''}`);
   });
 });
@@ -35,7 +35,7 @@ async function connectToMongoose() {
     await mongoose.connect(env.MONGO_DB_CONNECTION_STRING,  { useNewUrlParser: true })
   }
   catch (err) {
-    // TODO: send errors to your error tracker if needed
+    // Note: this is where you would send errors to your error tracker
     console.error('failed to intially connect to mongo', err);
     const timeUntilRetrying = Math.min(MAX_DELAY_TO_RECONNECT, (Math.pow(2, numberOfMongooseRetries) * 1000));
     console.log(`will try reconnecting in ${timeUntilRetrying / 1000} seconds`);
@@ -61,7 +61,7 @@ const redisEvents = [
   'warning',
 ].forEach(redisEvent => {
   redisClient.on(redisEvent, (err) => {
-    // TODO: send errors to your error tracker if needed
+    // Note: this is where you would send errors to your error tracker
     console.log(`redis client event: ${redisEvent}. ${err ? err: ''}`);
   });
 });
@@ -74,7 +74,7 @@ let redisConnected = false;
 
 function tryToStartTheServer() {
   if (mongooseConnected && redisConnected) {
-    console.log("mongoose and redis are connected. LETS GO!");
+    console.log("mongoose and redis are connected. LET'S GO!");
     app.emit('ready');
   }
 }
